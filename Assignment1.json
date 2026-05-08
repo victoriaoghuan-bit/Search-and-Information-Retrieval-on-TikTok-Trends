@@ -1,0 +1,778 @@
+{
+  "organisation":"TikTok",
+  "location":"Asia",
+  "person":" Jimmy Fallon",
+  "animal":"",
+  "explanation":"",
+  "queries":
+  [
+    {
+      "number":1,
+      "original_query":"Who are the most famous people on TikTok",
+      "keyword_query":  "TikTok famous followers",
+      "kibana_query": 
+      {
+        "query":
+  {
+          "multi_match":
+	  {
+            "query":"TikTok famous followers",
+            "fields":[],
+            "type":"best_fields"
+          }
+        }
+      },
+      "answer_type":"PERSON",
+      "exact_answers": [ "Kim Dracula", "Khaby Lame", "Lisa and Lena", "Davis Burleson",  "Vanessa Lopes" ],
+      "matches":
+      [
+        {
+	  "docid":"67303140",
+	  "sentences":
+	  [
+	    "Samuel Wellings, known professionally as Kim Dracula, is an Australian alternative/indie music artist from Hobart, Tasmania whose songs have achieved popularity on TikTok."
+     ]
+	},
+        {
+	  "docid":"60917617",
+	  "sentences":
+	  [
+	    "The most-followed individual on the platform is Khaby Lame, with over 161.8 million followers."
+	  ]
+	},
+	{
+	  "docid":"53043474",
+	  "sentences":
+	  [
+      "As of 11 October 2022, Lisa and Lena have over 13.6 million followers on their new TikTok account."
+	  ]
+        }
+      ]
+  },
+  {
+      "docid":"71857131",
+      "sentences":
+      [
+        "In March 2020, Burleson of Houston began posting on TikTok at the age of 17. He amassed 100,000 followers by the fall of 2020 when he moved to New York City to study photography at the Eugene Lang College of Liberal Arts at The New School."
+      ]
+    },
+    {
+      "docid":"75820437",
+      "sentences":
+      [
+        "With more than 30 million followers on TikTok, she is known for posting dance videos. ."
+      ]
+    },  
+    {
+      "number":2,
+      "original_query": "Which TikTok songs have had the biggest impact on the platform",
+      "keyword_query":"TikTok dance names viral trends",
+      "kibana_query":
+      {
+        "query":
+	{
+          "multi_match":
+	  {
+            "query":"something",
+            "fields":[],
+            "type":"best_fields"
+          }
+        }
+      },
+      "answer_type":"PERSON",
+      "exact_answers": [ "Lottery", "Castaways", "She Make It Clap", "Dinero", "3 Musketeers"],
+      "matches":
+      [
+        {
+	  "docid": "75284842",
+	  "sentences":
+	  [
+	    "She danced to the song, Lottery by K-Camp, an Atlanta-based rapper. The renegade dance incorporated viral dances include Woah and Wave.Jalaiah Harmon is an American dancer and content creator, who is credited for choreographing the Renegade Dance, one of the most popular dances on TikTok."
+	  ]
+  },
+  {
+    "docid":"3043474",
+    "sentences":
+[
+"Castaways is a song that aired in the animated children's TV show The Backyardigans. It went viral on TikTok in 2021."
+]
+}
+  ]
+
+},
+    
+    {
+      "docid": "68214377",
+      "sentences":
+ [
+    "Soulja Boy originally self-promoted the song on the Chinese video-sharing platform TikTok by doing an assortment of short dances to the beginning of the song, eventually fleshing out the dance and starting a viral trend on both the TikTok and Triller platforms, accumulating millions of views on both the original videos and various user-made video replies."
+        
+  ]
+    },
+    {
+      "docid": "68318867",
+      "sentences":
+  [
+  "It was produced by D'Mile and Willstrumentals. The song did not gain significant attention until 2021, when it went viral on video sharing app TikTok, subsequently charting across Europe."
+]
+},
+{
+  [
+    
+    {
+      "docid": "65195240",
+      [
+      "sentences": "She is perhaps best known for her song 3 Musketeers that gained popularity on the video-sharing platform TikTok.",
+      ]
+    }
+  ]
+    },
+    {
+      "number":3,
+      "original_query":"When did TikTok rise in popularity",
+      "keyword_query":"TikTok popularity history",
+      "kibana_query":
+      {
+        "query":
+	{
+          "multi_match":
+	  {
+            "query":"TikTok popularity history Musically",
+            "fields": ["title", "parsedParagraphs"],
+            "type":"best_fields"
+          }
+        }
+      },
+      "answer_type":"DATE",
+      "exact_answers": [ "2019 and October 2020", "September 2017", "August 2 2018", "Dinero", "2020"],
+      "matches":
+      [
+        {
+	  "docid": "74828384",
+	  "sentences":
+	  [
+    "The video-sharing platform TikTok gained global popularity in the year 2019, and surpassed 2 billion mobile downloads worldwide in October 2020. TikTok has allowed many music artists to gain a wider audience, and has spawned several viral hit songs. Since the COVID-19 pandemic, the platform has also launched many songs that failed to garner initial commercial success into sleeper hits."
+	  ]
+	}
+]
+  },
+  {
+    "docid":"74954639",
+    "sentences":
+   [
+  "The online video platform TikTok has had worldwide a social, political, and cultural impact since its global launch in September 2017."
+   ]
+},
+{
+  [
+    {
+      "docid": "50991804",
+      [
+       "sentences": "On August 2, 2018, musical.ly and TikTok merged together, with existing accounts and data consolidated into one app, keeping the title TikTok. This ended musical.ly and made TikTok a worldwide app, excluding China, since China's separate version of TikTok is called Douyin."
+      ]
+      }
+  ]
+    },
+    {
+      "docid": "71463510",
+      "sentences":
+  [
+    "An Internet aesthetic, also simply referred to as an aesthetic or microaesthetic, is a visual art style, sometimes accompanied by a fashion style, subculture, or music genre, that usually originates from the Internet or is popularized on it. Throughout the 2010s and 2020s, online aesthetics gained increasing popularity, specifically on social media platforms such as Tumblr, Pinterest, Instagram and TikTok, and often used by people to express their individuality and creativity. They can also be used to create a sense of community and belonging among people who share the same interests."
+  ]
+},
+{
+  [
+    {
+      "docid": "66963891",
+      [
+      "sentences": "TikTok food trends are specific food recipes and food-related fads on the social media platform TikTok. This content amassed popularity in 2020 during the COVID-19 pandemic, as many people cooked and ate at home and more people turned to social media for entertainment."
+      ]
+    }
+  ]
+    },
+        "number":4,
+        "original_query":" Which countires have bannned or restricted TikTok",
+        "keyword_query":"TikTok ban countries",  
+        "kibana_query":
+        {
+          {  
+  "query": {  
+    "bool": {  
+      "should": [  
+        {  
+          "multi_match": {  
+            "query": "TikTok ban countries restricted censorship data privacy",   
+            "fields": ["title", "parsedParagraphs"],   
+            "type": "best_fields"  
+          }  
+        }  
+      ]  
+    }  
+  },  
+  "size": 40  
+} 
+        },
+        "answer_type":"GPE",
+        "exact_answers": [ "United States", "New Zeland",  "Afghanistan", "India", "China"],
+        "matches":
+          {
+      "docid":"73356801",
+      "sentences":
+      [
+        "In January 2020, the United States Army and Navy banned TikTok on government devices after the Defense Department labeled it a security risk. Before the policy change, army recruiters had been using the platform to attract young people."
+      ]
+      },
+          {
+      "docid":"56822861",
+      "sentences":
+      [
+        "TikTok is reportedly banned in several Asian countries including Afghanistan, Armenia, Azerbaijan, India, Iran, Kyrgyzstan, Nepal, and Syria. The app was previously banned temporarily in Indonesia, but has been lifted."
+      ]
+      },
+      {
+    "docid":"65445492",
+        "sentences":
+        [
+          "On 17 March 2023, the New Zealand Parliamentary Service banned TikTok on devices connected to Parliament, citing cybersecurity concerns and advice from the Government Communications Security Bureau (GCSB), the country's signals intelligence agency. "
+        ]
+        },
+      {
+        "docid":"54450737",
+        "sentences":
+        [
+          "Citing national security issues the Indian Government banned CapCut and TikTok along with 58 other Chinese apps on 29 June 2020. "
+        ]
+        },
+        {
+          "docid":"66690367",
+          "sentences":
+          [
+            "TikTok has blocked videos about human rights in China, particularly those that reference Xinjiang internment camps and the Uyghur genocide, and disabled the accounts of users who post them. "
+          ]
+          },
+            "number":5,
+            "original_query":" ",
+            "keyword_query":"TikTok popular songs",
+            "kibana_query":
+            {
+              "query":
+        { 
+                "multi_match":
+          {
+                  "query":"TikTok popular songs ",  
+                  "fields": ["title", "parsedParagraphs"],
+                  "type":"best_fields"
+                }
+              }
+            },
+            "answer_type":"PERSON",
+            "exact_answers": [ "SkeeYee", "Old Town Road" "Good Loyal Thots","Paparazzi" "Ppcocaine", ],
+            "matches":
+            [  
+              {
+                "docid":"74828384",
+                "sentences":
+                [
+                  "The TikTok Billboard Top 50 is a chart published weekly by Billboard in the United States. It ranks the most popular songs on the social media platform TikTok in the United States based on a combination of total creations, video views and user engagement on the platform. The chart premiered on September 14, 2023, with the song "SkeeYee" by American rapper Sexyy Red at number one."
+                ]
+              }
+                  ]
+                  {
+                    "docid":"74954639",
+                    "sentences":
+                    [
+                      "American artist Lil Nas X notably rose to fame after his song Old Town Road went viral on TikTok in 2019. He acknowledged the platform's influence in popularising the song,saying [TikTok] really boosted the song ... I credit them a lot,"
+                    ]
+                  },
+                        {
+                    "docid": "75177795",
+                    "sentences":
+                    [
+                      "His music became popular on TikTok in 2023 and his songs Good Loyal Thots, Narcissistic Personality Disorder, Look Don't Touch, I Love You Hoe, and GMFU all reached the top-10 of the Billboard Hot Dance/Electronic Songs chart."
+                    ]
+                    },
+                  {
+                    "docid":"67303140",
+                    "sentences":
+                    [
+                      "In November 2020, Kim Dracula released on TikTok a metal cover of Paparazzi by Lady Gaga. The song was subsequently released to Spotify on 11 December 2020. Their Paparazzi cover acquired viral popularity within months, with six million views on YouTube, thirteen million plays on Spotify, and use in over 60,000 TikTok clips before the end of the year."
+                    ]
+                    },
+                    {
+                      "docid":  "65195240",
+                      "sentences":
+                      [
+                        "She is perhaps best known for her song 3 Musketeers that gained popularity on the video-sharing platform TikTok.",
+                      ]
+                      }
+                        "number":6,
+                        "original_query":"Which artists have the most popular TikTok songs",
+                        "keyword_query":"TikTok popular artists",
+                        "kibana_query":
+                        {
+                          "query":
+                    { 
+                            "multi_match":
+                      {
+                              "query":"TikTok popular artists",
+                              "fields":["title", "parsedParagraphs"],
+                              "type":"best_fields"
+                            }
+                          }
+                        },
+                        "answer_type":"PERSON",
+                        "exact_answers": [ "Lil Nas X", "Sexyy Red", "Kim Dracula", "Ppcocaine","310babii" ],
+                        "matches":
+                        [
+                          {
+                      "docid": "74954639",
+                      "sentences":
+                      [
+                        "American artist Lil Nas X notably rose to fame after his song Old Town Road went viral on TikTok in 2019."
+                      ]
+                      }
+                        ]
+                        {
+                          "docid":"74828384",
+                          "sentences":
+                          [
+                            "The chart premiered on September 14, 2023, with the song SkeeYee by American rapper Sexyy Red at number one."
+                          ]
+                          },
+                              {
+                          "docid": "67303140",
+                          "sentences":
+                          [
+                          "Samuel Wellings, known professionally as Kim Dracula, is an Australian alternative/indie music artist from Hobart, Tasmania whose songs have achieved popularity on TikTok."
+                          ]
+                        },
+                        {
+                          "docid":"65195240",
+                          "sentences":
+                          [
+                            "Lilliane Catherine Diomi (born June 1, 2001), known professionally as ppcocaine (previously known as trapbunniebubbles), is an American social media personality and rapper. She is perhaps best known for her song 3 Musketeers that gained popularity on the video-sharing platform TikTok."
+                          ]
+                          },
+                          {
+                            "docid":"75788941",
+                            "sentences":
+                            [
+                              "Soak City (Do It) is a song by American rapper 310babii, released on June 3, 2023 as the lead single from his debut studio album Lottery Pick (2023)."
+                            ]
+                                }
+                              ]
+                            },
+                            {
+                              "number":7,
+                              "original_query":"Which organisations have partnered with TikTok to promote mental health awareness?",
+                              "keyword_query":"TikTok organisations mental health awareness",
+                              "kibana_query":
+                              {
+                                "query":
+                          {
+                                  "multi_match":
+                            {
+                                    "query":"TikTok organizations mental health awareness charity sponsorship social media",
+                                    "fields": ["title", "parsedParagraphs"],
+                                    "type":"best_fields"
+                                  }
+                                }
+                              },
+                              "answer_type":"ORG",
+                              "exact_answers": [ "Rare Beauty", "INKEY List", "Kelly Toys","Lonely Whale" "Black Lives Matter"],
+                              "matches":
+                              [
+                                {
+                                  "docid": "65181920",
+                                  "sentences":
+                                  [ 
+                                    "Rare Beauty is an American cosmetics company founded and owned by Selena Gomez. Inspired by her third studio album, Rare (2020), the company aims to break down unrealistic standards of perfection by promoting inclusivity and addressing mental health initiatives and education.Going viral on TikTok, the Rare Beauty blush has made a significant impact on the brands imaging, some even say the product is \too pigmented.", 
+                                   ]
+                                  }
+                                    ]
+                                  }
+                                {
+                                  "docid": "36538082",
+                                  "sentences": 
+                              [
+                                  "On February 18, 2021, Cassandra was a special guest on the #AskINKEYAskathon, a 4-hour virtual event hosted by skincare brand The Inkey List. This event was dedicated to educating and empowering attendees and answering their skincare questions.In June 2021, Cassandra served as a brand ambassador for The INKEY List in honor of Acne Awareness Month and led social media discussions about skincare, hosted a Q& A with brand founders, created original video content advising a select group of subscribers on their skincare journeys, and more.",
+                                ]
+                                  }
+                                ]
+                                    {
+                                  "docid": "68907369",
+                                  "sentences":
+                                [
+                                  "Kelly Toys Holdings has a charitable donation program called Kelly Toys Care where Kelly Toys Holding's employees would volunteer to host charitable events and donate toys to anyone that needs comfort. According to Kelly Toys Care, they value Education, Inclusion, and Mental Health and Wellness. They also want to support any charitable organizations around the world with the same mission and spread awareness regarding mental health."
+                                ]
+                                },
+                                {
+                                  "docid":  "70576565",
+                                  "sentences":
+                                  [
+                                    "In October 2020, Yarbro signed with United Talent Agency. That December, he announced his first ever product collaboration with the Hyram x Kinship Sea the Good collection. A portion of the collection's profits were donated to Lonely Whale, a charity devoted to removing plastic from oceans. In 2022, he started a podcast called Justaposition, a play on the word juxtaposition, which is centered around exploring his and other influencers' mental health journeys. That year he also began posting to Flip, a social media app similar to TikTok; although according to Glossy, he had only a small following on the app as of that August.",
+                                  ]
+                                },
+                                {
+                                  "docid":"46536040",
+                                  "sentences":
+                                  [
+                                    "Although K-pop and young social media users take credit themselves for the largely empty venue, and media attributed the event to these subsets, it is difficult to fully prove that they were responsible. The social posts made ahead of the rally to encourage reserving tickets were strategically deleted to ensure the guerrilla nature of the campaign, and concerns about COVID-19 may have further reduced ticket holder desire to show up
+                                    Also in 2020, K-pop fans became active in the Black Lives Matter movement, raising money and infiltrating hashtags originated by those opposing the movement.",
+                                  ]
+                                  },
+                                  
+                                  {
+                                    "number":8,
+                                    "original_query":"What  countries have raised privacy and safety concerns about TikTok ",
+                                    "keyword_query":"safety countries privacy TikTok",  
+                                    "kibana_query":
+                                    {
+                                      "query":
+                                {
+                                        "multi_match":
+                                  {
+                                          "query":"safety privacy concerns TikTok countries data protection raised",
+                                          "fields":["title", "parsedParagraphs", "keywords"],
+                                          "type":"best_fields"
+                                        }
+                                      }
+                                    },
+                                    "answer_type":"GPE",
+                                    "exact_answers": [ "Russia", "United States", "Somalia", "India", "China"   ],
+                                    "matches":
+                                    [
+                                      {
+     "docid":"56822861",
+                                  "sentences":
+                                  [
+                                    "As of 2022, TikTok is the 10th most popular app in Russia. After a new set of Russian fake news laws was installed in March 2022, the company announced a series of restrictions on Russian and non-Russian posts and livestreams. Tracking Exposed, a user data rights group, learned of what was likely a technical glitch that became exploited by pro-Russia posters. It stated that although this and other loopholes were patched by TikTok before the end of March, the initial failure to correctly implement the restrictions, in addition to the effects from Kremlin's fake news laws, contributed to the formation of a splInternet ... dominated by pro-war content in Russia." 
+                                  ]
+                                },
+                              ]
+                                }
+  "docid":"74828384",
+                                  "sentences":
+                                  [
+                                    "In January 2020, the United States Army and Navy banned TikTok on government devices after the Defense Department labeled it a security risk. "
+                                  ]
+                                      {
+                                  "docid": "65445492",
+                                  "sentences":
+                                  [
+                                    "On August 21, 2023, Somalia's communications ministry announced a ban on TikTok (along with Telegram and 1xBet) citing the spread of propaganda and indecent content, but the call has not been enforced.",
+                                  ]
+                                },
+                                {
+                                  "docid":"54450737",
+                                  "sentences":
+                                  [
+                                    "TikTok was only available in India and musical.ly was available globally. In order for TikTok to go global, ByteDance merged musical.ly with TikTok on August 2, 2018, keeping the name TikTok. Another notable acquisition includes News Republic from Cheetah Mobile in November 2017.
+                                    In December 2018, ByteDance sued Chinese technology news site Huxiu for defamation after Huxiu reported that ByteDance's Indian-language news app Helo was propagating fake news.
+                                    In March 2021, the Financial Times reported that ByteDance was part of a group of Chinese companies that aimed to deploy technology to circumvent Apple's privacy policies.",
+                      
+                                  ]
+                                  },
+                                  {
+                                    "docid":"60917617",
+                                    "sentences":
+                                    [
+                                      "The following table lists the 20 most-followed accounts on Douyin . Douyin is similar service as TikTok, but intended for Chinese users (to comply with censorship restrictions). They are both owned by ByteDance."
+                                    ]
+                                    },
+                                    {
+                                      "number":9,
+                                      "original_query":
+                                      "When did TikTok start gaining significant global popularity.",
+                                      "keyword_query":"TikTok global popularity",
+                                      "kibana_query":
+                                      {
+                                        "query":
+                                  {
+                                          "multi_match":
+                                    {
+                                            "query":"TikTok global popularity launch available gained",
+                                            "fields":["title", "passphrase"],
+                                            "type":"best_fields"
+                                          }
+                                        }
+                                      },
+                                      "answer_type":"DATE",
+                                      "exact_answers": [ "October 2020", "COVID-19 pandemic", "2019","2021", "2018" ],
+                                      "matches":
+                                      [
+                                        {
+                                    "docid":"56822861",
+                                    "sentences":
+                                    [
+                                    "Since their launches, TikTok and Douyin have gained global popularity. In October 2020, TikTok surpassed 2 billion mobile downloads worldwide.", 
+                                    ]
+                                  }
+                                      ]
+                                    }
+                                    
+                                    "docid":  "66963891",
+                                  "sentences":
+                                  [
+                                    "TikTok food trends are specific food recipes and food-related fads on the social media platform TikTok. This content amassed popularity in 2020 during the COVID-19 pandemic, as many people cooked and ate at home and more people turned to social media for entertainment.",
+                                   ]
+                                    {
+                                  "docid":"74828384",
+                                  "sentences":
+                                  [
+                                    "The video-sharing platform TikTok gained global popularity in the year 2019, and surpassed 2 billion mobile downloads worldwide in October 2020.",
+                                  ]
+                                  },
+                                  {
+                                    "docid": "74954639",
+                                    "sentences":
+                                    [
+                                      "It became the world's most popular website, ahead of Google, for the year 2021.",
+                                    ]
+                                  },
+                                  {
+                                    "docid":"60917617",
+                                    "sentences":
+                                    [
+                                      "This list contains the top 50 accounts by number of followers on the Chinese social media platform TikTok, which was merged with musical.ly in 2018. The most-followed individual on the platform is Khaby Lame, with over 161.8 million followers.",
+                                    ]
+                                    },
+                                    {
+                                      [
+                                        {
+                                          "number":10,
+                                          "original_query":"Which TikTok peronalities gained attention due to their makeup, skincare and beauty tips",
+                                          "keyword_query":" TikTok personality skincare makeup beauty tutorials beauty tips",
+                                          "kibana_query":
+                                          {
+                                            "query":
+                                      {
+                                              "multi_match":
+                                        {
+                                                "query": "TikTok personality skincare makeup beauty tutorials beauty tips",
+                                                "fields":["title", "passphrase", "parsedParagraphs"],
+                                                "type":"best_fields"
+                                              }
+                                            }
+                                          },
+                                          "answer_type":"PERSON", 
+                                          "exact_answers": [ "Mikayla Nogueira", "Mally Roncal", "Bel Priestley", "Marialejandra Marrero","Hyram Yarbro",   ],
+                                          "matches":
+                                          [
+                                            {
+                                        "docid": "67798643",
+                                        "sentences":
+                                        [
+                                          "Mikayla Jane Nogueira Hawken is an American social media influencer, known for posting makeup tutorials on TikTok and Instagram."
+                                        ]
+                                      },
+                                            {
+                                        "docid":"40052999",
+                                        "sentences":
+                                        [
+                                         " She has appeared on various platforms to discuss make-up techniques and trends TikTok, including Good Morning America, Wendy Williams Show, The View, The Oprah Winfrey Show, Rachael Ray, and Today as a beauty expert and has written for the New York Times, Huffington Post, and iVillage This has included promoting the use of make-up without special tools for contouring, etc. Roncal also the author of the Random House book Love, Lashes, and Lipstick: My Secrets for a Gorgeous, Happy Life."
+                                        ]
+                                        },
+                                      {
+                                        "docid":"74579839",
+                                        "sentences":
+                                        [
+                                          "Priestley began her career on the social media platforms YouTube and TikTok, where she documented her gender transition and made makeup and beauty videos."
+                                        ]
+                                        },
+                                             {
+                                          "docid":"52259913",
+                                          "sentences":
+                                          [
+                                            "In 2022 Mariale was voted as winner in the CEW Beauty Creator Awards in the Influencer of the year category. She was also named one of Hola! magazine's Top 100 Latina Powerhouse in the Beauty category."
+                                          ]
+                                          },
+                                      
+                                        {
+                                          "docid": "70576565",
+                                          "sentences":
+                                          [
+                                            "Hyram Yarbro is an American skincare influencer known for his Skincare by Hyram videos on YouTube and TikTok. His videos consist primarily of product reviews, skincare advice, and reactions to celebrity skincare routine videos."
+                                          ]
+                                          }
+                                           
+    {
+      "number":11,
+      "original_query":"Who are some TikTok comedic contnent creators",
+      "keyword_query":  "TikTok funny skit comedy comedic influencers",
+      "kibana_query": 
+      {
+        "query":
+  {
+          "multi_match":
+	  {
+            "query":"TikTok funny skit comedy comedic influencers",
+            "fields": ["title", "passphrase", "parsedParagraphs"],
+            "type":"best_fields"
+          }
+        }
+      },
+      "answer_type":"PERSON",
+      "exact_answers": [ "Aloma Isaac Junior", "Ben Brainard", "Ryan Shakes", "Sarah Cooper",  "Jackline Mensah", ],
+      "matches":
+      [
+        {
+	  "docid":"68026318",
+	  "sentences":
+	  [
+	    "Aloma Isaac Junior (born November 7, 1991) known by his stage name Zicsaloma is a Nigerian, comic skit maker, actor and singer. He rose to prominence for comedic videos he posts to Instagram, and TikTok."
+    ]
+    },
+        {
+	  "docid":"73729472",
+	  "sentences":
+	  [
+      "He gained attention on TikTok and other social media with his sketch series The Table, in which he acts out conversations between various American states."
+    ]
+	},
+	{
+	  "docid":"57836808",
+    "sentences":
+	  [
+      "After creating content on Musical.ly at a young age, Shakes gained a following on the latter's predecessor, TikTok, where he has over 6 million followers as of May 2023.He subsequently created his first channel on the site, posting comedic skits and videos filmed around his house, although these videos did not gain traction.",
+    ]
+    }
+    {
+      "docid":"Sarah Cooper",
+      "sentences":
+     [
+        "Sarah Anne Cooper (born December 19, 1977) is an American author and comedian based in New York City.She was named Digital Creator of the Year by Adweek, and was nominated in the Creator of the Yearand Comedy categories for the 10th Streamy Awards.",  
+      ]
+    },                                 
+    {
+      "docid": "71473626",
+      
+      "sentences":
+      [
+        "Jackline Mensah (born May 24, 2001) also known as ' TikTok goddess' or ' Lassu' is a Ghanaian social media personality, comedian, actress and influencer. She gained internet popularity by posting comedic video contents on the mobile-app TikTok, amassing over 2.0 million followers as of 2022.",
+      ]
+      }                               
+      "number":12,
+      "original_query":"What events marked the censorship on TikTok in some countries ",
+      "keyword_query":  "TikTok censorship ban government China restrictions controversial actions influencers",
+      "kibana_query": 
+      {
+        "query":
+  {
+          "multi_match":
+	  {
+            "query":"TikTok funny skit comedy comedic influencers",
+            "fields": ["title", "passphrase", "parsedParagraphs"],
+            "type":"best_fields"
+          }
+        }
+      },
+      "answer_type":"EVENT",
+      "exact_answers": [ "Uyghur genocide", "Nagorno-Karabakh conflict", "US elections", "Russia and Ukraine War ", "US Presidential relections", "Sarah Cooper",  "Jharkhand mob lynching", ],
+      "matches":
+      [
+        {
+	  "docid": "66690367",
+	  "sentences":
+	  [
+      "In November 2020, a former TikTok executive told a British parliamentary committee that TikTok censored content critical of China, particularly content related to the Uyghur genocide.",
+    ]
+    },
+    {
+      "docid": "65445492",
+      "sentences":
+      [
+        "Multiple governmental agencies and private businesses have imposed or attempted to impose temporary or indefinite bans on the social media service TikTok due to concerns from the 2020 Nagorno-Karabakh conflict, national security, China’s ownership and influence, pornography, human trafficking, children’s safety, antisemitism, addictiveness, terrorism and toxic content
+          In August 2023, Senegal blocked TikTok following the arrest of opposition leader Ousmane Sonko.",
+      ]
+    },
+    {
+      "docid": "73356801",
+      [
+      "sentences":"In 2020, the U.S. government announced that it was considering banning the Chinese social media platform TikTok upon a request from then-U.S. president Donald Trump, who viewed the app as a national security threat. TikTok would later announce plans to file legal action challenging the order's transactional prohibitions with U.S. companies. The lawsuit against the Trump administration's order was filed on August 24, and contended that the administration's order was motivated by Trump's efforts to boost re-election support through protectionist trade policies aimed at China. A separate suit filed the same day by TikTok's U.S. technical program manager Patrick Ryan against Trump and Secretary of Commerce Wilbur Ross sought a temporary restraining order (TRO), arguing that his due process rights were violated and the ban was an unconstitutional taking of Ryan's property under the Fifth Amendment; the suit also claimed Trump's action was likely a retaliation because of the TikTok pranks targeting the June 20 campaign rally.",
+   
+       
+      ]
+      }                                                                            
+             
+    {
+	  "docid":"56822861",
+	  "sentences":
+	  [
+      "As of 2022, TikTok is the 10th most popular app in Russia. After a new set of Russian fake news laws was installed in March 2022, the company announced a series of restrictions on Russian and non-Russian posts and livestreams. Tracking Exposed, a user data rights group, learned of what was likely a technical glitch that became exploited by pro-Russia posters. It stated that although this and other loopholes were patched by TikTok before the end of March, the initial failure to correctly implement the restrictions, in addition to the effects from Kremlin's fake news laws, contributed to the formation of a splInternet ... dominated by pro-war content in Russia. TikTok said that it had removed 204 accounts for swaying public opinion about the war while obscuring their origins and that its fact checkers had removed 41,191 videos for violating its misinformation policies.",
+    ]
+	},
+	{
+	  "docid" : "62448867",
+    "sentences":
+	  [
+      "Solanki was affiliated with Shiv Sena as secretary of IT cell and contact president of Gujarat section. He identifies himself as a social worker and Hinduvadi. After 2019 Maharashtra political crisis, Shiv Sena decided to ally with Nationalist Congress Party and Indian National Congress to form government. On 26 November 2019, Solanki resigned from Shiv Sena, after 21 years, by citing that his ideology would not let him work with Congress. Additionally, he said that he will always remain Balasaheb's Shivsainik.
+        In July 2019, Solanki lodged a FIR against TikTok users for posting provocative content to take revenge following the 2019 Jharkhand mob lynching. Later, TikTok removed the controversial videos, blocked users and users apologised. Solanki had also registered a complaint against actor Ajaz Khan over mocking police machinery to defend those users who earlier posted videos. The actor was arrested and sent to judicial custody for 14 days.",
+    ]
+      }
+      {
+        "number":13,
+        "original_query":"What organisations have raised concern about TikToks safety and privacy ",
+        "keyword_query":  "TikTok organisations awarness privacy data safety concern",
+        "kibana_query": 
+        {
+          "query":
+    {
+            "multi_match":
+      {
+              "query":"TikTok organisations awarness privacy data safety concern",
+              "fields": ["title", "passphrase", "parsedParagraphs"],
+              "type":"best_fields"
+            }
+          }
+        },
+        "answer_type":"PERSON",
+        "exact_answers": [ "Internet Matters", "Transportation Security Administration", "Ryan Shakes", "Sarah Cooper",  "Jackline Mensah", ],
+        "matches":
+        [
+          {
+      "docid":"56822861",
+      "sentences":
+      [
+        "TikTok announced a family safety mode in February 2020 for parents to be able to control their children's presence on the app. There is a screen time management option, restricted mode, and the option to put a limit on direct messages. The app expanded its parental controls feature called Family Pairing in September 2020 to provide parents and guardians with educational resources to understand what children on TikTok are exposed to. Content for the feature was created in partnership with online safety nonprofit, Internet Matters.",
+      ]
+      },
+          
+      
+      
+      {
+      "docid":"67269361",
+      "sentences":
+      [
+        " Senator Josh Hawley introduced the National Security and Personal Data Protection Act to prohibit TikTok's parent company and others from transferring the personal data of Americans to China. Senator Hawley also introduced a bill to ban downloading and using TikTok on government devices because of national security concerns. In December 2019, the United States Navy as well as the U.S. Army banned TikTok from all government-issued devices. The Transportation Security Administration also prohibited its personnel from posting on the platform for outreach purposes. Following its prohibition by the U.S. military, the Australian Defence Force also banned TikTok on its devices. Legislation was subsequently introduced in the U.S. Senate that would prohibit all federal employees from using or downloading TikTok.
+        The Transportation Security Administration also prohibited its personnel from posting on the platform for outreach purposes. Following its prohibition by the U.S. military, the Australian Defence Force also banned TikTok on its devices.",
+      ]
+      },
+    {
+      "docid":"57836808",
+      "sentences":
+      [
+        "After creating content on Musical.ly at a young age, Shakes gained a following on the latter's predecessor, TikTok, where he has over 6 million followers as of May 2023.He subsequently created his first channel on the site, posting comedic skits and videos filmed around his house, although these videos did not gain traction.",
+      ]
+      }
+      {
+        "docid":"Sarah Cooper",
+        "sentences":
+       [
+          "Sarah Anne Cooper (born December 19, 1977) is an American author and comedian based in New York City.She was named Digital Creator of the Year by Adweek, and was nominated in the Creator of the Yearand Comedy categories for the 10th Streamy Awards.",  
+        ]
+      },                                 
+      {
+        "docid": "71473626",
+        
+        "sentences":
+        [
+          "Jackline Mensah (born May 24, 2001) also known as ' TikTok goddess' or ' Lassu' is a Ghanaian social media personality, comedian, actress and influencer. She gained internet popularity by posting comedic video contents on the mobile-app TikTok, amassing over 2.0 million followers as of 2022.",
+        ]
+        }                      
+                                                                            
+                                 
+                
+              
+            
+            
