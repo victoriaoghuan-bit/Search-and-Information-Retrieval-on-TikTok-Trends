@@ -1,16 +1,79 @@
-# Search-and-Information-Retrieval-on-TikTok-Trends
-Semantic search and information retrieval project using TikTok-related datasets, JSON queries, Kibana/Elasticsearch queries, and precision/recall evaluation.
+<div align="center">
 
-Overview
-This project constructs a Gold Standard query set for evaluating information retrieval performance on TikTok-related content. It tests two query strategies — keyword queries and structured Kibana queries — measuring Precision and Recall at cutoffs of n=5 and n=10.
-The gold standard covers 20 natural language queries spanning topics such as TikTok influencers, viral music, privacy controversies, censorship events, and platform growth.
+```
+ ████████╗██╗██╗  ██╗████████╗ ██████╗ ██╗  ██╗
+    ██╔══╝██║██║ ██╔╝╚══██╔══╝██╔═══██╗██║ ██╔╝
+    ██║   ██║█████╔╝    ██║   ██║   ██║█████╔╝ 
+    ██║   ██║██╔═██╗    ██║   ██║   ██║██╔═██╗ 
+    ██║   ██║██║  ██╗   ██║   ╚██████╔╝██║  ██╗
+    ╚═╝   ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
+```
 
-Gold Standard Format
-The .json file contains 20 queries, each with:
-FieldDescriptionoriginal_queryFull natural language questionkeyword_queryExtracted keywords for baseline retrievalkibana_queryStructured Elasticsearch query (multi-match, phrase search, must/should clauses)answer_typeExpected answer type (PERSON, DATE, LOCATION, etc.)exact_answersGround truth answer entitiesmatchesRelevant document IDs and supporting sentences
+# Semantic Search Engine
 
-Example Query
-json{
+**An information retrieval system built over a TikTok corpus**  
+*Evaluating keyword vs. structured Kibana queries using Precision & Recall*
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white)
+![Kibana](https://img.shields.io/badge/Kibana-005571?style=flat&logo=kibana&logoColor=white)
+![University](https://img.shields.io/badge/University_Project-Information_Retrieval-8B5CF6?style=flat)
+
+</div>
+
+---
+
+## Overview
+
+This project constructs a **Gold Standard query set** of 20 natural language questions about TikTok, then evaluates two retrieval strategies against a Wikipedia-sourced document corpus using Elasticsearch and Kibana.
+
+Each query is tested in two forms — a simple keyword query and a structured Kibana query — with Precision and Recall measured at cutoffs of **n=5** and **n=10**.
+
+---
+
+## Pipeline
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  TikTok Corpus  │────▶│  Gold Standard  │────▶│ Elasticsearch / │
+│ (Wikipedia docs)│     │   20 queries    │     │     Kibana      │
+└─────────────────┘     └─────────────────┘     └────────┬────────┘
+                                                          │
+                                      ┌───────────────────┴───────────────────┐
+                                      ▼                                       ▼
+                             ┌─────────────────┐                   ┌─────────────────┐
+                             │  Keyword Query  │                   │  Kibana Query   │
+                             │   (baseline)    │                   │  (structured)   │
+                             └────────┬────────┘                   └────────┬────────┘
+                                      └───────────────┬─────────────────────┘
+                                                      ▼
+                                           ┌─────────────────┐
+                                           │  P & R @ n=5,   │
+                                           │      n=10       │
+                                           └─────────────────┘
+```
+
+---
+
+## Repo Structure
+
+```
+📁 tiktok-semantic-search/
+├── 📄 gold_standard.json          # 20 queries with keyword, Kibana form,
+│                                  # exact answers & relevant doc matches
+├── 🐍 eqs_evaluate_query_set.py   # Evaluation script — outputs P & R
+│                                  # at n=5 and n=10 for both query types
+└── 📝 README.md
+```
+
+---
+
+## Gold Standard Format
+
+Each of the 20 entries in `gold_standard.json` follows this structure:
+
+```json
+{
   "number": 1,
   "original_query": "Who are the most famous people on TikTok",
   "keyword_query": "TikTok famous followers",
@@ -24,46 +87,120 @@ json{
     }
   },
   "answer_type": "PERSON",
-  "exact_answers": ["Kim Dracula", "Khaby Lame", "Lisa and Lena", "Davis Burleson", "Vanessa Lopes"]
+  "exact_answers": ["Khaby Lame", "Kim Dracula", "Lisa and Lena"],
+  "matches": [
+    {
+      "docid": "60917617",
+      "sentences": [
+        "The most-followed individual on the platform is Khaby Lame, with over 161.8 million followers."
+      ]
+    }
+  ]
 }
-Query Topics
-The 20 queries cover:
+```
 
-Influencers — most famous accounts, male/female creators, comedic creators, beauty/skincare personalities
-Music — viral songs, popular artists, rap artists on TikTok
-Privacy & Safety — countries raising concerns, organisations responding to data issues
-Censorship & Bans — government restrictions, notable censorship events
-Platform Growth — when TikTok rose to global popularity
-Partnerships — organisations partnering with TikTok on mental health awareness
+---
 
-Evaluation
-Run the provided evaluation script to compute Precision and Recall for both query types:
-bashpython eqs_evaluate_query_set.py
-The script outputs P/R values at n=5 and n=10 for:
+## Query Topics
 
-keyword_query — simple keyword-based retrieval
-kibana_query — structured Elasticsearch query
+The 20 queries span six themes:
 
-Results Summary
-Table 1 — Keyword Query Performance
-#QueryP@5R@5P@10R@101Who are the most famous people on TikTok0.600.600.501.002When did TikTok rise in popularity0.400.300.300.503Which artists have the most popular TikTok songs0.800.800.501.004Which countries banned or restricted TikTok0.800.800.501.005Which organisations partnered with TikTok on mental health0.200.200.200.406Which rap artists have gone viral on TikTok1.001.000.051.007What countries raised privacy/safety concerns about TikTok0.400.400.400.808Names of female TikTok content creators0.600.600.300.609TikTok influencers who made lip sync content0.400.400.400.8010Organisations that acknowledged TikTok's social media influence0.800.800.501.0011When were popular TikTok songs released0.800.800.501.0012Events marking TikTok censorship in some countries0.800.800.400.8013TikTok comedic content creators0.400.400.300.6014TikTok personalities known for makeup/skincare/beauty0.600.600.400.8015When did TikTok gain significant global popularity0.400.400.200.4016Organisations raising concern about TikTok safety/privacy0.600.600.501.0017Popular male TikTok influencers0.000.000.100.2018Where are famous TikTok influencers from0.600.600.400.8019When did TikTok influencers gain a large following0.200.200.300.6020When were famous TikTok influencers born0.400.400.400.80
-Key Findings
+| Theme | Queries |
+|---|---|
+| 👤 Influencers & creators | Most famous accounts, male/female creators, comedic creators, beauty/skincare personalities |
+| 🎵 Music | Viral songs, popular artists, rap artists, song release dates |
+| 🔒 Privacy & safety | Countries raising concerns, organisations responding to data issues |
+| 🚫 Censorship & bans | Government restrictions, notable censorship events |
+| 📈 Platform growth | When TikTok rose to global popularity |
+| 🤝 Partnerships | Organisations partnering with TikTok on mental health awareness |
 
-Precision decreases as n increases — retrieving more documents brings in less relevant results, as expected.
-Recall does not consistently increase with n — for some queries (e.g. Q6, Q7) recall stays flat or drops, indicating that relevant documents are not ranked highly enough to appear at n=10.
-Kibana structured queries outperform keyword queries on several queries (e.g. Q6 improves from P@10=0.05 to P@10=0.50) by enabling phrase matching and field-level constraints.
-Hardest queries: Q17 (popular male influencers) — both keyword and Kibana queries return P=0.00 at n=5, suggesting the keyword set does not align well with how the corpus describes male influencers.
+---
 
-Technologies
+## Running the Evaluation
 
-Elasticsearch / Kibana — document indexing and query execution
-Python — evaluation script
-JSON — gold standard format
+```bash
+python eqs_evaluate_query_set.py
+```
 
-Course Context
-Built as part of a university Information Retrieval module. The task involved:
+This outputs Precision and Recall at n=5 and n=10 for both query strategies.
 
-Selecting a topic corpus (TikTok-related Wikipedia articles)
-Designing 20 natural language queries with ground truth answers
-Constructing keyword and structured Kibana queries
-Evaluating retrieval quality using Precision and Recall at n=5 and n=10
+---
+
+## Results
+
+### Table 1 — Keyword query
+
+| # | Query | P@5 | R@5 | P@10 | R@10 |
+|---|---|:---:|:---:|:---:|:---:|
+| 1 | Who are the most famous people on TikTok | 0.60 | 0.60 | 0.50 | 1.00 |
+| 2 | When did TikTok rise in popularity | 0.40 | 0.30 | 0.30 | 0.50 |
+| 3 | Which artists have the most popular TikTok songs | 0.80 | 0.80 | 0.50 | 1.00 |
+| 4 | Which countries banned or restricted TikTok | 0.80 | 0.80 | 0.50 | 1.00 |
+| 5 | Which organisations partnered with TikTok on mental health | 0.20 | 0.20 | 0.20 | 0.40 |
+| 6 | Which rap artists have gone viral on TikTok | 1.00 | 1.00 | 0.05 | 1.00 |
+| 7 | What countries raised privacy/safety concerns about TikTok | 0.40 | 0.40 | 0.40 | 0.80 |
+| 8 | Names of female TikTok content creators | 0.60 | 0.60 | 0.30 | 0.60 |
+| 9 | TikTok influencers who made lip sync content | 0.40 | 0.40 | 0.40 | 0.80 |
+| 10 | Organisations that acknowledged TikTok's social media influence | 0.80 | 0.80 | 0.50 | 1.00 |
+| 11 | When were popular TikTok songs released | 0.80 | 0.80 | 0.50 | 1.00 |
+| 12 | Events marking TikTok censorship in some countries | 0.80 | 0.80 | 0.40 | 0.80 |
+| 13 | TikTok comedic content creators | 0.40 | 0.40 | 0.30 | 0.60 |
+| 14 | TikTok personalities known for makeup/skincare/beauty | 0.60 | 0.60 | 0.40 | 0.80 |
+| 15 | When did TikTok gain significant global popularity | 0.40 | 0.40 | 0.20 | 0.40 |
+| 16 | Organisations raising concern about TikTok safety/privacy | 0.60 | 0.60 | 0.50 | 1.00 |
+| 17 | Popular male TikTok influencers | 0.00 | 0.00 | 0.10 | 0.20 |
+| 18 | Where are famous TikTok influencers from | 0.60 | 0.60 | 0.40 | 0.80 |
+| 19 | When did TikTok influencers gain a large following | 0.20 | 0.20 | 0.30 | 0.60 |
+| 20 | When were famous TikTok influencers born | 0.40 | 0.40 | 0.40 | 0.80 |
+
+### Table 2 — Kibana query (**bold** = improved over keyword baseline)
+
+| # | Query | P@5 | R@5 | P@10 | R@10 |
+|---|---|:---:|:---:|:---:|:---:|
+| 1 | Who are the most famous people on TikTok | 0.60 | 0.60 | 0.50 | 1.00 |
+| 2 | When did TikTok rise in popularity | 0.40 | 0.30 | 0.30 | 0.50 |
+| 3 | Which countries banned or restricted TikTok | 0.80 | 0.80 | 0.50 | 1.00 |
+| 4 | Which artists have the most popular songs on TikTok | 0.80 | 0.80 | 0.50 | 1.00 |
+| **5** | **Which organizations partnered with TikTok on mental health** | **0.20** | **0.20** | **0.30** | **0.60** |
+| **6** | **Which rappers have gone viral on TikTok** | **1.00** | **1.00** | **0.50** | **1.00** |
+| 7 | What countries raised privacy/safety concerns about TikTok | 0.20 | 0.20 | 0.20 | 0.40 |
+| 8 | Names of female TikTok content creators | 0.60 | 0.60 | 0.30 | 0.60 |
+| 9 | TikTok influencers who made lip sync content | 0.40 | 0.40 | 0.40 | 0.80 |
+| 10 | Organisations that acknowledged TikTok's social media influence | 0.80 | 0.80 | 0.50 | 1.00 |
+| 11 | When were popular TikTok songs released | 0.80 | 0.80 | 0.50 | 1.00 |
+| 12 | Events marking TikTok censorship in some countries | 0.80 | 0.80 | 0.40 | 0.80 |
+| 13 | TikTok comedic content creators | 0.40 | 0.40 | 0.30 | 0.60 |
+| 14 | TikTok personalities known for makeup/skincare/beauty | 0.60 | 0.60 | 0.40 | 0.80 |
+| 15 | When did TikTok gain significant global popularity | 0.20 | 0.20 | 0.20 | 0.40 |
+| 16 | Organisations raising concern about TikTok safety/privacy | 0.60 | 0.60 | 0.50 | 1.00 |
+| 17 | Popular male TikTok influencers | 0.00 | 0.00 | 0.10 | 0.20 |
+| 18 | Where are famous TikTok influencers from | 0.60 | 0.60 | 0.40 | 0.80 |
+| 19 | When did TikTok influencers gain a large following | 0.20 | 0.20 | 0.30 | 0.60 |
+| 20 | When were famous TikTok influencers born | 0.40 | 0.40 | 0.40 | 0.80 |
+
+---
+
+## Key Findings
+
+> 📉 **Precision decreases as n increases** — retrieving more documents brings in less relevant results, as expected in standard IR evaluation.
+
+> 📊 **Recall does not consistently improve at n=10** — for queries like Q6 and Q7, recall stays flat, meaning relevant documents aren't ranked highly enough to surface at larger cutoffs.
+
+> ✅ **Kibana structured queries outperform keyword queries on Q6** — phrase matching lifted P@10 from `0.05` → `0.50`, the single biggest improvement in the set.
+
+> ❌ **Q17 fails both strategies** — "popular male TikTok influencers" returns P=0.00 at n=5 for both query types, revealing a vocabulary mismatch between the queries and how the corpus describes male creators.
+
+---
+
+## Technologies
+
+- [Elasticsearch](https://www.elastic.co/elasticsearch/) — document indexing and retrieval
+- [Kibana](https://www.elastic.co/kibana/) — structured query construction and execution
+- [Python](https://www.python.org/) — evaluation script
+- JSON — gold standard format
+
+---
+
+<div align="center">
+<sub>Built as part of a university Information Retrieval module</sub>
+</div>
